@@ -124,6 +124,10 @@ input[name="msg"] {
     color: #fff;
 }
 
+#send-box input:nth-child(3):hover{
+    background: #666;
+}
+
 .leftMsg {
     display: flex;
     justify-content: flex-start;
