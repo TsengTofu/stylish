@@ -472,7 +472,9 @@ app.getUserOrderList = function(id) {
     function(req) {
       let data = JSON.parse(req.responseText);
       console.log(req.responseText);
-      console.log(data);
+	  console.log(data);
+	  const { order_no, order_time, order_details, status } = data;
+	  console.log(data);
       let currentUrl = window.location.href;
       console.log(currentUrl);
       if (currentUrl.includes("orderlist")) {
@@ -481,7 +483,7 @@ app.getUserOrderList = function(id) {
 
         // 填資料
 
-        const { order_no, order_time, order_details, status } = data;
+       
 
         // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
         // 這邊改動小車車的位置------------------------
