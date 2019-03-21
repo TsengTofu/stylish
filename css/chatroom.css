@@ -117,7 +117,7 @@ input[name="msg"] {
     border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-#send-box input:nth-child(2) {
+#send-box input:nth-child(3) {
     width: 12%;
     border-style: none;
     background: #000;
