@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         status.innerText = "Connected.";
         let userCookie = getCookie('user_id');
         if (userCookie !== 'Admin') {
+            socket.emit('webjoin', userCookie);
             socket.emit('join', userCookie);
             document.getElementById('name').value = userCookie;
 
