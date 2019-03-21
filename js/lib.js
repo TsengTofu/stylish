@@ -446,10 +446,10 @@ app.getUser = function (id) {
 					orderStatus_element.className = "order_statusValue";
 					if (orderStatus === 3) {
 						orderStatus_element.innerHTML = "物流狀態：完成訂單";
-						orderStatus_element.style.color = "#b8d149";
+						orderStatus_element.style.color = "#30a082";
 					} else if (orderStatus === 2) {
 						orderStatus_element.innerHTML = "物流狀態：待簽收";
-						orderStatus_element.style.color = "#f4bf42";
+						orderStatus_element.style.color = "#ffa81e";
 					} else if (orderStatus === 1) {
 						orderStatus_element.innerHTML = "物流狀態：出貨中";
 						orderStatus_element.style.color = "#488fd1";
