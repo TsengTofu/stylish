@@ -90,6 +90,7 @@
     position: absolute;
     bottom: 0%;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 #send-box input {
@@ -97,7 +98,7 @@
     font-family: "微軟正黑體";
     border-radius: 8px;
     border-style:none;
-    border: 2px solid #000;
+    padding: 5px;
 }
 
 #send-box input.error {
@@ -114,7 +115,7 @@ input[name="msg"] {
 }
 
 input[type="button"] {
-    width: 10%;
+    width: 12%;
 }
 
 .leftMsg {
@@ -131,8 +132,8 @@ input[type="button"] {
 .msg {
     width: 95%;
     padding: 5px 5px 5px 10px;
-    background: #000;
-    color:#fff;
+    background: #edeeef;
+    color:#000;
     border-radius:8px;
     margin: 10px auto 0;
 }
