@@ -138,7 +138,6 @@ input[name="msg"] {
 
 .leftMsg .name::after{
     content: "|";
-    display: flex;
 }
 
 .rightMsg {
