@@ -599,17 +599,31 @@ app.getUserOrderList = function (id) {
 							console.log(order_details.freight);
 							console.log(order_details.total);
 							console.log(order_details.payment);
-							console.log(order_details.shipping);
+
 							console.log(order_details.subtotal);
-							console.log(order_details.recipient.time);
-							console.log(order_details.recipient.phone);
-							console.log(order_details.recipient.address);
 							
 							const getUserName = document.querySelector(".user_name");
 							getUserName.innerHTML = "收件人姓名："+ `${order_details.recipient.name}`;
 
 							const getUserEmail = document.querySelector(".user_email");
 							getUserEmail.innerHTML = "收件人信箱："+ `${order_details.recipient.email}`;
+
+							const getUserPhone = document.querySelector(".user_phone");
+							getUserPhone.innerHTML = "收件人電話："+ `${order_details.recipient.phone}`;
+
+							const getUserAdr = document.querySelector(".user_address");
+							getUserAdr.innerHTML = "收件人地址："+ `${order_details.recipient.address}`;
+
+							const shippingTime = document.querySelector(".user_shippingtime");
+							shippingTime.innerHTML = "運送時間："+ `${order_details.recipient.time}`;
+
+							const shippingWay = document.querySelector(".user_shippingway");
+							shippingWay.innerHTML = "運送方式："+ `${order_details.recipient.shipping}`;
+
+							const pay = document.querySelector(".user_payment");
+							pay.innerHTML = "付款方式："+ `${order_details.payment}`;
+
+
 
 
 
