@@ -536,9 +536,6 @@ app.getUserOrderList = function(id) {
             // orderList 每筆訂單的內容
             orderDetailList.forEach(item => {
               const { color, id, main_image, price, qty, size, title } = item;
-              console.log(color.name);
-              console.log(id);
-              console.log(main_image);
               console.log(price);
               console.log(qty);
               console.log(size);
@@ -566,9 +563,18 @@ app.getUserOrderList = function(id) {
 			  const orderAloneItemImg = document.querySelector(".order_item_alone_content img");
 			  orderAloneItemImg.src = main_image;
 
+			  // 右邊區塊
 			  const ItemRight = document.querySelector(".right_content");
+
 			  const ItemTitle = document.querySelector(".item_title");
 			  ItemTitle.innerHTML = title;
+
+			  const ItemID = document.querySelector(".item_id");
+			  ItemID.innerHTML = id;
+
+			  const ItemColor = document.querySelector(".item_color");
+			  ItemColor.innerHTML = color.name;
+
 
 			  
             });
