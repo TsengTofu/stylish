@@ -543,20 +543,17 @@ app.getUserOrderList = function(id) {
 			  console.log(title);
 			  
               console.log(order_details.freight);
-              // console.log(order_details.total);
-              // console.log(order_details.payment);
-              // console.log(order_details.shipping);
-              // console.log(order_details.subtotal);
-              // console.log(order_details.recipient);
-              // console.log(order_details.recipient.name);
-              // console.log(order_details.recipient.email);
-              // console.log(order_details.recipient.time);
-              // console.log(order_details.recipient.phone);
-              // console.log(order_details.recipient.address);
+              console.log(order_details.total);
+              console.log(order_details.payment);
+              console.log(order_details.shipping);
+              console.log(order_details.subtotal);
+              console.log(order_details.recipient);
+              console.log(order_details.recipient.name);
+              console.log(order_details.recipient.email);
+              console.log(order_details.recipient.time);
+              console.log(order_details.recipient.phone);
+              console.log(order_details.recipient.address);
             });
-
-            console.log(status);
-
             // render createElement
             // 訂單號碼
             const orderlistID = document.querySelector(".order_id");
