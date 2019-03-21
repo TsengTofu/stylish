@@ -61,6 +61,7 @@
 .leftBox{
     width: 70%;
     flex-direction: column;
+    text-align: left;
 }
 
 .chattingText{
