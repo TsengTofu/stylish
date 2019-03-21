@@ -77,7 +77,6 @@ main>.view {
 /* collection收藏明細 */
 
 .collection_list_items {
-	width: 100%;
 	border: 1px solid #000;
 	border-radius: .125rem;
 	text-align: left;
