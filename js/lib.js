@@ -198,7 +198,7 @@ app.fb.loginStatusChange = function (response) {
 		app.userId = 1111;
 		if (app.get("#csc")) {
 			let cecRoom = document.getElementById("csc");
-			cecRoom.setAttribute("href", "/chat/1111");
+			// cecRoom.setAttribute("href", "/chat/1111");
 		}
 	}
 	if (typeof app.fb.statusChangeCallback === "function") {
@@ -219,7 +219,7 @@ app.fb.updateLoginToServer = function () {
 		//----------------------
 		if (app.get("#csc")) {
 			let cecRoom = document.getElementById("csc");
-			cecRoom.setAttribute("href", "/chat/" + app.userId);
+			// cecRoom.setAttribute("href", "/chat/" + app.userId);
 		}
 		//----------------------
 		console.log(app.userId);
