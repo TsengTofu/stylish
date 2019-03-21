@@ -543,21 +543,6 @@ app.getUserOrderList = function (id) {
 								size,
 								title
 							} = item;
-							console.log(price);
-							console.log(qty);
-							console.log(size);
-							console.log(title);
-
-							console.log(order_details.freight);
-							console.log(order_details.total);
-							console.log(order_details.payment);
-							console.log(order_details.shipping);
-							console.log(order_details.subtotal);
-							console.log(order_details.recipient.name);
-							console.log(order_details.recipient.email);
-							console.log(order_details.recipient.time);
-							console.log(order_details.recipient.phone);
-							console.log(order_details.recipient.address);
 
 							const orderlistID = document.querySelector(".order_id");
 							orderlistID.innerHTML = "訂單編號：" + `${dataOrderNum}`;
@@ -609,6 +594,28 @@ app.getUserOrderList = function (id) {
 							// 這個是最上層
 							const orderDetails = document.querySelector(".order_detail");
 							orderDetails.appendChild(orderAloneItem);
+
+							// 收件人資料
+							console.log(order_details.freight);
+							console.log(order_details.total);
+							console.log(order_details.payment);
+							console.log(order_details.shipping);
+							console.log(order_details.subtotal);
+							console.log(order_details.recipient.time);
+							console.log(order_details.recipient.phone);
+							console.log(order_details.recipient.address);
+							
+							const getUserName = document.querySelector(".user_name");
+							getUserName.innerHTML = "收件人姓名："+ `${order_details.recipient.name}`;
+
+							const getUserEmail = document.querySelector(".user_email");
+							getUserEmail.innerHTML = "收件人信箱："+ `${order_details.recipient.email}`;
+
+
+
+
+
+
 
 
 
