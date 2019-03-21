@@ -482,44 +482,39 @@ app.getUserOrderList = function(id) {
         console.log(currentUrl_product);
         console.log(currentUrl_product.searchParams.get("id"));
         const currentOrderIDNum = currentUrl_product.searchParams.get("id");
-		// 找到訂單編號的意思
+        // 找到訂單編號的意思
 
-		data.forEach(item => {
-			const { order_no, order_time, order_details, status } = item;
-			console.log(order_no);
-			let dataOrderNum = order_no;
-			if(currentOrderIDNum === dataOrderNum){
-				console.log(dataOrderNum);
-				
-			}
-		})
+        data.forEach(item => {
+          const { order_no, order_time, order_details, status } = item;
+          console.log(order_no);
+          let dataOrderNum = order_no;
+          if (currentOrderIDNum === dataOrderNum) {
+            console.log(dataOrderNum);
+			console.log(order_details);
+            // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
+            // 這邊改動小車車的位置------------------------
+            let orderStatus = status;
+            const truckMove = document.querySelector("#lottie");
+            console.log(truckMove);
+            console.log(orderStatus);
+            if (orderStatus === 3) {
+              truckMove.style.left = "66%";
+            } else if (orderStatus === 2) {
+              truckMove.style.left = "46%";
+            } else if (orderStatus === 1) {
+              truckMove.style.left = "26%";
+            } else {
+              truckMove.style.left = "6%";
+            }
+            // 這邊改動小車車的位置------------------------
 
-
-
-		
-
-        // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
-        // 這邊改動小車車的位置------------------------
-        let orderStatus = status;
-        const truckMove = document.querySelector("#lottie");
-        console.log(truckMove);
-        console.log(orderStatus);
-        if (orderStatus === 3) {
-          truckMove.style.left = "66%";
-        } else if (orderStatus === 2) {
-          truckMove.style.left = "46%";
-        } else if (orderStatus === 1) {
-          truckMove.style.left = "26%";
-        } else {
-          truckMove.style.left = "6%";
-        }
-        // 這邊改動小車車的位置------------------------
-
-        // 訂單時間 組字串
-        let date = order_time;
-        date = date.split("/");
-        date = date[2] + "/" + date[0] + "/" + date[1];
-        console.log(`${date}`);
+            // 訂單時間 組字串
+            let date = order_time;
+            date = date.split("/");
+            date = date[2] + "/" + date[0] + "/" + date[1];
+            console.log(`${date}`);
+          }
+        });
 
         console.log(order_details.list);
         // orderList 每筆訂單的內容
