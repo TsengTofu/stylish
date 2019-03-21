@@ -571,9 +571,7 @@ app.getUserOrderList = function (id) {
 							orderAloneItemImg.src = main_image;
 							orderAloneItem.appendChild(orderAloneItemImg);
 
-							// 這個是最上層
-							const orderDetails = document.querySelector(".order_detail");
-							orderDetails.appendChild(orderAloneItem);
+
 
 							// 右邊區塊-----------------------------------------------
 							const ItemRight = document.createElement("div");
@@ -581,7 +579,7 @@ app.getUserOrderList = function (id) {
 							orderAloneItem.appendChild(ItemRight);
 
 							const ItemTitle = document.createElement("p");
-							ItemTitle.className ="item_title";
+							ItemTitle.className = "item_title";
 							ItemTitle.innerHTML = title;
 							orderAloneItem.appendChild(ItemTitle);
 
@@ -599,7 +597,10 @@ app.getUserOrderList = function (id) {
 
 							// const ItemQty = document.querySelector(".item_qty");
 							// ItemQty.innerHTML = qty;
-
+							
+							// 這個是最上層
+							const orderDetails = document.querySelector(".order_detail");
+							orderDetails.appendChild(orderAloneItem);
 
 
 
