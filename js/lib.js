@@ -485,7 +485,7 @@ app.getUserOrderList = function(id) {
         // 找到訂單編號的意思
 
         data.forEach(item => {
-          const { order_no, order_time, order_details, status } = item;
+          const { order_no, order_time, order_details, status, color, main_image } = item;
           console.log(order_no);
           let dataOrderNum = order_no;
           if (currentOrderIDNum === dataOrderNum) {
