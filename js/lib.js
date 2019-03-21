@@ -729,11 +729,11 @@ app.getUserKeep = function (id) {
 				collectRight.appendChild(collectTitle);
 				collectRight.appendChild(collectID);
 				collectRight.appendChild(collectPrice);
-				collectListItem.appendChild(collect_btn);
 
 				// 圖片
 				collectListItem.appendChild(collectListImg);
 				collectListItem.appendChild(collectRight);
+				collectListItem.appendChild(collect_btn);
 				collectListItem.appendChild(collectDelete);
 				app.get(".collection_content").appendChild(collectListItem);
 				// i++;
