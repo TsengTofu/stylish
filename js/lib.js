@@ -481,7 +481,7 @@ app.getUserOrderList = function(id) {
 
         // 填資料
 
-        // const { order_no, order_time, order_details, status } = item;
+        const { order_no, order_time, order_details, status } = data;
 
         // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
         // 這邊改動小車車的位置------------------------
@@ -501,7 +501,7 @@ app.getUserOrderList = function(id) {
         // 這邊改動小車車的位置------------------------
 
         // 訂單時間 組字串
-        let date = data.order_time;
+        let date = order_time;
         date = date.split("/");
         date = date[2] + "/" + date[0] + "/" + date[1];
         console.log(`${date}`);
@@ -510,7 +510,7 @@ app.getUserOrderList = function(id) {
         // orderList 每筆訂單的內容
         let orderListAlone = order_details.list;
 
-        // const { color, id, main_image, price, qty, size, title } = item;
+        const { color, id, main_image, price, qty, size, title } = data;
 
         // 要想辦法把status帶進去
         console.log(status);
