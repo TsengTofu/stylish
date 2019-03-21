@@ -76,7 +76,7 @@
 					Server：<span id="status"> - </span>
 					/ <span id="online">0</span> online.</div>
 			</div>
-			<div class="close"><i class="fas fa-times"></i></div>
+			<div class="close" onclick="close()"><i class="fas fa-times"></i></div>
 		</div>
 		<div id="content"></div>
 		<div id="send-box">
@@ -124,6 +124,11 @@
 		function popup() {
 			app.get("#container").style.display = "block";
 		}
+
+		function close() {
+			app.get("#container").style.display = "none";
+		}
+		
 	</script>
 	<script src="js/chatroom.js"></script>
 </body>
