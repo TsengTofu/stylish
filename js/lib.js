@@ -585,7 +585,7 @@ app.getUserOrderList = function (id) {
 							ItemID.className = "item_id";
 							ItemID.innerHTML = id;
 							orderAloneItem.appendChild(ItemID);
-							
+
 							const ItemColor = document.createElement("p");
 							ItemColor.className = "item_color";
 							ItemColor.innerHTML = color.name;
@@ -597,12 +597,14 @@ app.getUserOrderList = function (id) {
 							orderAloneItem.appendChild(ItemSize);
 
 							const ItemPrice = document.createElement("p");
-							ItemPrice.className="item_price";
+							ItemPrice.className = "item_price";
 							ItemPrice.innerHTML = "NT$" + `${price}`;
 							orderAloneItem.appendChild(ItemPrice);
 
-							// const ItemQty = document.querySelector(".item_qty");
-							// ItemQty.innerHTML = qty;
+							const ItemQty = document.createElement("p");
+							ItemQty.className = "item_qty";
+							ItemQty.innerHTML = qty;
+							orderAloneItem.appendChild(ItemQty);
 
 							// 這個是最上層
 							const orderDetails = document.querySelector(".order_detail");
