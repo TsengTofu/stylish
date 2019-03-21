@@ -526,7 +526,7 @@ app.getUserOrderList = function(id) {
 			let orderDetailList = order_details.list;
 			// orderList 每筆訂單的內容
 			orderDetailList.forEach(item => {
-				const { color, order_time, order_details, status, color, main_image } = item;
+				const { color } = item;
 				console.log(color);
 			
 			})
