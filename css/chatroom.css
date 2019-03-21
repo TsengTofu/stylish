@@ -96,6 +96,7 @@
     font-family: "微軟正黑體";
     border-radius: 8px;
     border-style:none;
+    border: 2px solid #000;
 }
 
 #send-box input.error {
