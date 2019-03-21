@@ -488,7 +488,7 @@ app.getUserOrderList = function (id) {
 			console.log(data);
 			let currentUrl = window.location.href;
 			if (currentUrl.includes("orderlist")) {
-				alert("url contains orderlist");
+				// alert("url contains orderlist");
 				// 如果是在orderlist頁面
 				let currentUrl_product = new URL(window.location.href);
 				console.log(currentUrl_product);
