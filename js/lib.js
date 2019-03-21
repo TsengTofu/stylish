@@ -562,6 +562,7 @@ app.getUserOrderList = function (id) {
 							for (let i = 0; i < orderDetailList.length; i++) {
 								// render createElement
 								// 訂單號碼
+								alert("有抓到")
 								const orderlistID = document.querySelector(".order_id");
 								orderlistID.innerHTML = "訂單編號：" + `${dataOrderNum}`;
 								console.log(`${dataOrderNum}`);
