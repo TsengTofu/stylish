@@ -137,7 +137,7 @@ input[name="msg"] {
 }
 
 .leftMsg .name::after{
-    content: "|";
+    content: "  |";
 }
 
 .rightMsg {
