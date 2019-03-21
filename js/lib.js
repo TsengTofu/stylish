@@ -807,7 +807,7 @@ app.deleteUserProductKeep = function () {
 
 // 客服按鈕處發事件
 const btnService = document.querySelector("#csc");
-btnService.addEventListener("click", popup);
+btnService.addEventListener("click", popup());
 function popup() {
 	app.get("#container").style.display = "block";
 }
