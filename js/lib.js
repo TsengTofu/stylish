@@ -571,6 +571,9 @@ app.getUserOrderList = function (id) {
 							orderAloneItemImg.src = main_image;
 							orderAloneItem.appendChild(orderAloneItemImg);
 
+							const orderDetails = document.querySelector(".order_detail");
+							orderDetails.appendChild(orderAloneItem);
+
 							// 右邊區塊-----------------------------------------------
 							//   const ItemRight = document.querySelector(".right_content");
 
