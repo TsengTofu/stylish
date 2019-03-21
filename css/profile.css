@@ -46,6 +46,7 @@ main>.view {
 	margin-top: 1vw;
 	display:flex;
 	box-sizing: border-box;
+	background: #f7f7f7;
 }
 
 .order_statusValue{
