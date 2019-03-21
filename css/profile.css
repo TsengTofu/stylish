@@ -47,6 +47,11 @@ main>.view {
 	display:flex;
 	box-sizing: border-box;
 }
+
+.order_statusValue{
+	font-weight: bold;
+}
+
 .order_num, .order_time, .order_statusValue, .orderAList_btn{
 	width: 25%;
 	box-sizing: border-box;
