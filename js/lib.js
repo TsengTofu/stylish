@@ -525,9 +525,9 @@ app.getUserOrderList = function(id) {
             console.log(order_details.list);
             // orderList 每筆訂單的內容
             console.log(status);
-            console.log(color);
+            console.log(order_details.list.color);
             // 顏色要再額外抓
-            console.log(id);
+            console.log(order_details.list.id);
             console.log(main_image);
             console.log(price);
             console.log(qty);
