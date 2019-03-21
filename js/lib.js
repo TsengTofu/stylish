@@ -559,7 +559,18 @@ app.getUserOrderList = function(id) {
               // 訂單號碼
               const orderlistID = document.querySelector(".order_id");
               orderlistID.innerHTML = "訂單編號：" + `${dataOrderNum}`;
-              console.log(`${dataOrderNum}`);
+			  console.log(`${dataOrderNum}`);
+
+			  // 單品項
+			  const orderAloneItem = document.querySelector(".order_item_alone_content");
+			  const orderAloneItemImg = document.querySelector(".order_item_alone_content img");
+			  orderAloneItemImg.src = main_image;
+
+			  const ItemRight = document.querySelector(".right_content");
+			  const ItemTitle = document.querySelector(".item_title");
+			  ItemTitle.innerHTML = title;
+
+			  
             });
           }
         });
