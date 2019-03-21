@@ -93,6 +93,10 @@ main>.view {
 	align-self: left;
 }
 
+.right_content{
+	width: 65%;
+}
+
 .collect_btn {
 	background: #000;
 	color: #fff;
