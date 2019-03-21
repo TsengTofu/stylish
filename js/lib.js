@@ -461,7 +461,7 @@ app.getUser = function (id) {
 					// <a href="#" class="orderAList_btn">查看細節</a>
 					const orderAList_btn = document.createElement("a");
 					orderAList_btn.className = "orderAList_btn";
-					orderAList_btn.textContent = "查看細節>";
+					orderAList_btn.innerHTML = "查看細節<i class="fas fa-arrow-circle-right"></i>";
 					orderAList_btn.setAttribute("href", `orderlist.html?id=${order_no}`);
 
 					orderListItem.appendChild(orderNum);
