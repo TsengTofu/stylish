@@ -193,7 +193,14 @@ app.fb.loginStatusChange = function (response) {
 		app.state.auth = response.authResponse;
 		app.fb.updateLoginToServer();
 	} else {
+		// 沒登入-----
 		app.state.auth = null;
+		app.userId = 1111;
+		if (app.get("#csc")) {
+			let cecRoom = document.getElementById("csc");
+			cecRoom.setAttribute("href", "/chat/1111");
+		}
+		// 沒登入-----
 	}
 	if (typeof app.fb.statusChangeCallback === "function") {
 		app.fb.statusChangeCallback();
@@ -210,6 +217,12 @@ app.fb.updateLoginToServer = function () {
 		// 這邊是為了要抓到目前登入的ID是誰
 		let accountInfo = JSON.parse(req.responseText);
 		app.userId = accountInfo.data.user.id;
+		//----------------------
+		if (app.get("#csc")) {
+			let cecRoom = document.getElementById("csc");
+			cecRoom.setAttribute("href", "/chat/" + app.userId);
+		}
+		//----------------------
 		console.log(app.userId);
 		app.getUser(app.userId);
 		// 這邊要有一個function抓收藏API
@@ -433,13 +446,13 @@ app.getUser = function (id) {
 					const orderStatus_element = document.createElement("p");
 					orderStatus_element.className = "order_statusValue";
 					if (orderStatus === 3) {
-						orderStatus_element.innerHTML = "物流狀態<span>完成訂單</span>";
+						orderStatus_element.innerHTML = "物流狀態：完成訂單";
 					} else if (orderStatus === 2) {
-						orderStatus_element.innerHTML = "物流狀態<span>待簽收</span>";
+						orderStatus_element.innerHTML = "物流狀態：待簽收";
 					} else if (orderStatus === 1) {
-						orderStatus_element.innerHTML = "物流狀態<span>出貨中</span>";
+						orderStatus_element.innerHTML = "物流狀態：出貨中";
 					} else {
-						orderStatus_element.innerHTML = "物流狀態<span>待出貨</span>";
+						orderStatus_element.innerHTML = "物流狀態：待出貨";
 					}
 
 					// 查看單筆訂單的按鈕

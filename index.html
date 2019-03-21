@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stylish</title>
-<link rel="stylesheet" type="text/css" href="css/index.css" media="all" />
-<script src="js/lib.js"></script>
-<script src="js/index.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stylish</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" media="all" />
+	<!-- chatroom -->
+	<!-- font-awesome css -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/chatroom.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+	<!-- chatroom -->
+	<script src="js/lib.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/chatroom.js"></script>
 </head>
+
 <body>
 	<header>
 		<div class="padding-mobile"></div>
@@ -21,7 +31,9 @@
 			<form class="item" action="./">
 				<input type="text" class="search" name="tag" />
 			</form>
-			<a href="cart.html" class="item cart"><div id="cart-qty" class="qty"></div></a>
+			<a href="cart.html" class="item cart">
+				<div id="cart-qty" class="qty"></div>
+			</a>
 			<div class="item member">
 				<img src="imgs/member.png" />
 			</div>
@@ -35,7 +47,9 @@
 	<div class="padding-header-mobile"></div>
 	<div class="feature-mobile">
 		<a class="item" href="cart.html">
-			<div class="cart"><div id="cart-qty-mobile" class="qty"></div></div>
+			<div class="cart">
+				<div id="cart-qty-mobile" class="qty"></div>
+			</div>
 			購物車
 		</a>
 		<div class="item member">
@@ -51,6 +65,23 @@
 			<div id="products" class="products"></div>
 		</div>
 	</main>
+	<!-- 客服按鈕 -->
+	<a id="csc" class="service_btn" href="#"><i class="fas fa-comment-dots"></i> Stylish Service</a>
+	<!-- 客服跳出視窗chatroom -->
+	<div class="chatroom">
+		<div id="container">
+			<div id="status-box">Server：<span id="status">－</span>／<span id="online">0</span> online.</div>
+			<div id="content"></div>
+			<div id="send-box">
+				<form id="send-form">
+					<input type="text" name="name" id="name" placeholder="暱稱">
+					<input type="text" name="msg" id="msg" placeholder="說點什麼？">
+					<input type="submit" value="送出">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 客服跳出視窗chatroom -->
 	<footer>
 		<div class="view">
 			<div class="link link-0">
@@ -75,5 +106,15 @@
 	<div id="loading" class="loading">
 		<img src="imgs/loading.gif" />
 	</div>
+	<script>
+		// 只在首頁作
+		document.addEventListener("DOMContentLoaded", () => {
+			setTimeout(() => {
+				console.log(app.userId)
+				document.cookie = "user_id=" + app.userId;
+			}, 5000);
+		});
+	</script>
 </body>
+
 </html>
