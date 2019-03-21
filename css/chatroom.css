@@ -49,7 +49,8 @@
     background: #000;
     color: #fff;
     text-align: right;
-    font-size: .6em;
+    font-size: 1em;
+    border-radius: 8px;
 }
 
 #send-box {
