@@ -533,15 +533,16 @@ app.getUserOrderList = function(id) {
             let orderDetailList = order_details.list;
             // orderList 每筆訂單的內容
             orderDetailList.forEach(item => {
-              const { color, id, main_image } = item;
+              const { color, id, main_image, price, qty, size, title } = item;
 			  console.log(color.name);
 			  console.log(id);
 			  console.log(main_image);
-              // console.log(price);
-              // console.log(qty);
-              // console.log(size);
-              // console.log(title);
-              // console.log(order_details.freight);
+              console.log(price);
+              console.log(qty);
+              console.log(size);
+			  console.log(title);
+			  
+              console.log(order_details.freight);
               // console.log(order_details.total);
               // console.log(order_details.payment);
               // console.log(order_details.shipping);
