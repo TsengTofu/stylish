@@ -37,7 +37,7 @@
 }
 
 #content {
-    width: 80%;
+    /* width: 80%; */
     height: 350px;
     border-radius: 5px;
     background: #ffffff;
@@ -68,11 +68,11 @@
 }
 
 input[name="name"] {
-    width: 15%;
+    width: 12%;
 }
 
 input[name="msg"] {
-    width: 70%;
+    width: 65%;
 }
 
 input[type="button"] {
