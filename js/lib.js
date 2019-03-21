@@ -477,7 +477,7 @@ app.getUserOrderList = function(id) {
 	  console.log(data.order_time);
       let currentUrl = window.location.href;
 	  console.log(currentUrl);
-	  cconsole.log(urrentUrl.searchParams);
+	  cconsole.log(currentUrl.searchParams);
 
 	  
       if (currentUrl.includes("orderlist")) {
