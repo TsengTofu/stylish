@@ -507,7 +507,6 @@ app.getUserOrderList = function(id) {
               truckMove.style.left = "6%";
             }
             // 這邊改動小車車的位置------------------------
-
             // 訂單時間 組字串
             let date = order_time;
             date = date.split("/");
@@ -516,11 +515,6 @@ app.getUserOrderList = function(id) {
 
             console.log(order_details.list);
             // orderList 每筆訂單的內容
-            let orderListAlone = order_details.list;
-
-            const { color, id, main_image, price, qty, size, title } = data;
-
-            // 要想辦法把status帶進去
             console.log(status);
             console.log(color);
             // 顏色要再額外抓
@@ -542,11 +536,13 @@ app.getUserOrderList = function(id) {
             console.log(order_details.recipient.phone);
             console.log(order_details.recipient.address);
             // render createElement
-
             // 訂單號碼
             const orderlistID = document.querySelector(".order_id");
             orderlistID.innerHTML = "訂單編號" + `${dataOrderNum}`;
-            console.log(`${dataOrderNum}`);
+			console.log(`${dataOrderNum}`);
+			
+			// 出貨狀態
+			
           }
         });
       }
