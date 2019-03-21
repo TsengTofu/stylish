@@ -12,6 +12,7 @@
     bottom: 2%;
     transition: ease-in 0.05s;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 .service_btn:hover {
