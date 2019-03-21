@@ -810,7 +810,7 @@ const btnService = document.querySelector("#csc");
 function popup() {
 	app.get("#container").style.display = "block";
 }
-btnService.addEventListener("click", popup());
+btnService.addEventListener("click", popup);
 
 
 // Notification 推播通知 瀏覽器支援度檢查---------------------------------------
