@@ -805,7 +805,9 @@ app.deleteUserProductKeep = function () {
 	}
 };
 
-// click order 訂單按鈕
+// 客服按鈕處發事件
+
+
 
 // Notification 推播通知 瀏覽器支援度檢查---------------------------------------
 // if (!('Notification' in window)) {

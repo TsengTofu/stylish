@@ -4,6 +4,7 @@ function getCookie(name) {
     if (parts.length == 2) return parts.pop().split(";").shift();
 }
 var socket = io("https://j-zone.xyz");
+// 這邊改成server的網址
 let record_msg = null;
 let isSign = false
 document.addEventListener("DOMContentLoaded", () => {
