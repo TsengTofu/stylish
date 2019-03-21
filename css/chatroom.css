@@ -59,7 +59,9 @@
 }
 
 .chattingText{
-    width: 50%;
+    width: 40%;
+    font-size: 1.5em;
+
 }
 
 #status-box{
@@ -69,8 +71,6 @@
 .close{
     width: 10%;
 }
-
-
 
 
 
