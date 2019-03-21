@@ -49,6 +49,8 @@ main>.view {
 }
 .order_num, .order_time, .order_statusValue, .orderAList_btn{
 	width: 25%;
+	box-sizing: border-box;
+	padding: 10px;
 }
 
 
