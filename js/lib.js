@@ -805,13 +805,7 @@ app.deleteUserProductKeep = function () {
 	}
 };
 
-// 客服按鈕處發事件
-app.get("#csc").addEventListener("click",popup());
 
-function popup() {
-	app.get("#container").style.display = "block";
-	alert("Hello");
-}
 
 
 // Notification 推播通知 瀏覽器支援度檢查---------------------------------------
