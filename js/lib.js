@@ -486,7 +486,12 @@ app.getUserOrderList = function(id) {
 
 		data.forEach(item => {
 			const { order_no, order_time, order_details, status } = item;
-			console.log(order_no)
+			console.log(order_no);
+			let dataOrderNum = order_no;
+			if(currentOrderIDNum === dataOrderNum){
+				console.log(dataOrderNum);
+				
+			}
 		})
 
 
