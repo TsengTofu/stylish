@@ -807,10 +807,11 @@ app.deleteUserProductKeep = function () {
 
 // 客服按鈕處發事件
 const btnService = document.querySelector("#csc");
+btnService.addEventListener("click", popup);
 function popup() {
 	app.get("#container").style.display = "block";
 }
-btnService.addEventListener("click", popup);
+
 
 
 // Notification 推播通知 瀏覽器支援度檢查---------------------------------------
