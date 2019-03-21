@@ -618,7 +618,7 @@ app.getUserOrderList = function (id) {
 							shippingTime.innerHTML = "運送時間："+ `${order_details.recipient.time}`;
 
 							const shippingWay = document.querySelector(".user_shippingway");
-							shippingWay.innerHTML = "運送方式："+ `${order_details.recipient.shipping}`;
+							shippingWay.innerHTML = "運送方式："+ `${order_details.shipping}`;
 
 							const pay = document.querySelector(".user_payment");
 							pay.innerHTML = "付款方式："+ `${order_details.payment}`;
