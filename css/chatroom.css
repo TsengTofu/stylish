@@ -137,7 +137,9 @@ input[name="msg"] {
 }
 
 .leftMsg .name::after{
-    content: "    |";
+    content: "|";
+    padding-right: 2px;
+    box-sizing: border-box;
 }
 
 .rightMsg {
@@ -146,7 +148,9 @@ input[name="msg"] {
 }
 
 .rightMsg .name::before{
-    content: "    |";
+    content: "|";
+    padding-left: 2px;
+    box-sizing: border-box;
 }
 
 .msg {
