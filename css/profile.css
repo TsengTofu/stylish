@@ -1,0 +1,150 @@
+@import "common.css";
+/* 設定.flex{display:flex;} */
+
+/* main */
+
+main {
+	padding: 20px 10px;
+	padding-top: 100px;
+	padding-bottom: 400px;
+	text-align: center;
+}
+
+main>.view {
+	max-width: 800px;
+}
+
+/* orderList全部訂單明細 */
+
+.order_status {
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	border-bottom: 2px solid #313538;
+}
+
+.order_status li {
+	width: 20%;
+	background: #313538;
+	color: #fff;
+	margin-left: 2%;
+	padding: 5px;
+	letter-spacing: 2px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.order_status li:hover {
+	background: #8b572a;
+}
+
+.order_list_items {
+	width: 100%;
+	border: 1px solid #000;
+	border-radius: .125rem;
+	text-align: left;
+	margin-top: 1vw;
+}
+
+/* 查看單筆訂單的按鈕 */
+
+.orderAList_btn {
+	background: #000;
+	color: #fff;
+}
+
+/* orderList全部訂單明細 */
+
+/* collection收藏明細 */
+
+.collection_list_items {
+	width: 100%;
+	border: 1px solid #000;
+	border-radius: .125rem;
+	text-align: left;
+	margin-top: 1vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.collect_img {
+	width: 20%;
+	align-self: left;
+}
+
+.collect_btn {
+	background: #000;
+	color: #fff;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.collect_btn_delete {
+	background: url("../imgs/cart-remove.png");
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+.collect_btn_delete:hover {
+	background: url("../imgs/cart-remove-hover.png");
+	z-index: 999;
+}
+
+@media (max-width:600px) {
+	main {
+		padding-top: 50px;
+		padding-bottom: 300px;
+	}
+}
+
+/* .headline */
+
+main>.view>.headline {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #979797;
+}
+
+/* .profile */
+
+main>.view>.profile {
+	display: flex;
+	align-items: center;
+	margin-top: 40px;
+}
+
+main>.view>.profile>.picture {
+	flex: none;
+	width: 200px;
+	margin-left: 50px;
+	margin-right: 10px;
+}
+
+main>.view>.profile>.picture>img {
+	width: 100%;
+}
+
+main>.view>.profile>.details {
+	flex: auto;
+	line-height: 2em;
+	font-size: 1.2em;
+	overflow-x: hidden;
+	white-space: nowrap;
+}
+
+@media (max-width:600px) {
+	main>.view>.profile {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	main>.view>.profile>.picture {
+		margin: 0px;
+	}
+	main>.view>.profile>.details {
+		flex: none;
+		width: 100%;
+		margin-top: 20px;
+	}
+}

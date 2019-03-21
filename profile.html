@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stylish 個人資訊</title>
+	<link rel="stylesheet" type="text/css" href="css/profile.css" media="all" />
+	<script src="js/lib.js"></script>
+	<script src="js/profile.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="padding-mobile"></div>
+		<div class="logo"><a href="./"><img src="imgs/logo.png" /></a></div>
+		<nav>
+			<div class="item"><a href="./?tag=women">女裝</a></div>
+			<div class="item"><a href="./?tag=men">男裝</a></div>
+			<div class="item"><a href="./?tag=accessories">配件</a></div>
+		</nav>
+		<div class="feature">
+			<form class="item" action="./">
+				<input type="text" class="search" name="tag" />
+			</form>
+			<a href="cart.html" class="item cart">
+				<div id="cart-qty" class="qty"></div>
+			</a>
+			<div class="item member">
+				<img src="imgs/member.png" />
+			</div>
+		</div>
+	</header>
+	<nav class="mobile">
+		<div class="item"><a href="./?tag=women">女裝</a></div>
+		<div class="item"><a href="./?tag=men">男裝</a></div>
+		<div class="item"><a href="./?tag=accessories">配件</a></div>
+	</nav>
+	<div class="padding-header-mobile"></div>
+	<div class="feature-mobile">
+		<a class="item" href="cart.html">
+			<div class="cart">
+				<div id="cart-qty-mobile" class="qty"></div>
+			</div>
+			購物車
+		</a>
+		<div class="item member">
+			<img src="imgs/member-mobile.png" />
+			會員
+		</div>
+	</div>
+	<main>
+		<div class="view">
+			<h2 class="headline">會員基本資訊</h2>
+			<div class="profile">
+				<div class="picture">
+					<img id="profile-picture" />
+				</div>
+				<div class="details" id="profile-details"></div>
+			</div>
+			<!-- 全部訂單資料 -->
+			<!-- <h2 class="headline">訂單查詢</h2> -->
+			<h2 class="headline">訂單資料</h2>
+			<div class="order_list_container">
+				<ul class="order_status flex">
+					<li class=""><a href="#">待出貨</a></li>
+					<li class=""><a href="#">出貨中</a></li>
+					<li class=""><a href="#">待確認</a></li>
+					<li class=""><a href="#">已完成</a></li>
+				</ul>
+				<div class="order_tab_content">
+					<div class="prepare">
+						<!-- 假物件 -->
+						<!-- <div class="order_list_items">
+							<h4 id="order_num">訂單編號<span></span></h4>
+							<p id="order_time">訂單時間<span></span></p>
+							<p id="order_status">物流狀態<span></span></p>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<h2 class="headline">收藏清單</h2>
+			<div class="collection_content">
+				<!-- 假物件 -->
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="view">
+			<div class="link link-0">
+				<div class="item">關於 Stylish</div>
+				<div class="item">服務條款</div>
+				<div class="item">隱私政策</div>
+			</div>
+			<div class="link link-1">
+				<div class="item">聯絡我們</div>
+				<div class="item">FAQ</div>
+			</div>
+			<div class="social">
+				<img src="imgs/line.png" />
+				<img src="imgs/twitter.png" />
+				<img src="imgs/facebook.png" />
+			</div>
+			<div class="copyright">
+				&copy; 2018. All rights reserved.
+			</div>
+		</div>
+	</footer>
+	<div id="loading" class="loading">
+		<img src="imgs/loading.gif" />
+	</div>
+</body>
+
+</html>
