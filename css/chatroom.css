@@ -31,6 +31,8 @@
     right: 1%;
     bottom: 2%;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+    /* 一開始不要出現 */
+    display: none;
 }
 
 #content {

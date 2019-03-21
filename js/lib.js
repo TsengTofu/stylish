@@ -806,6 +806,9 @@ app.deleteUserProductKeep = function () {
 };
 
 // 客服按鈕處發事件
+app.get("#csc").addEventListener("click", ()=> {
+	app.get("#container").style.display = "block";
+});
 
 
 
