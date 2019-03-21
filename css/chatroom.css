@@ -46,6 +46,7 @@
 }
 
 .flexChat {
+    width: 100%;
     background: #000;
     color: #fff;
     text-align: right;
@@ -53,7 +54,24 @@
     border-radius: 8px 8px 0 0;
     padding: 10px;
     position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+.chattingText{
+    width: 50%;
+}
+
+#status-box{
+    width: 40%;
+}
+
+.close{
+    widows: 10%;
+}
+
+
+
 
 
 #send-box {
