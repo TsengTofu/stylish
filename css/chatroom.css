@@ -46,6 +46,8 @@
 }
 
 #status-box {
+    background: #000;
+    color: #fff;
     text-align: right;
     font-size: .6em;
 }
