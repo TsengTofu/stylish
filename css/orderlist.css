@@ -82,12 +82,15 @@
     margin: 25px auto;
 }
 
-.order_item_alone_content{
+.order_item_alone_content {
     display: flex;
+    border: 1px solid #000;
+    border-radius: .125rem;
+    padding: 2vw;
 }
 
-.order_item_alone_content .outerImg{
-    width:14%;
+.order_item_alone_content .outerImg {
+    width: 14%;
     align-self: left;
 }
 
