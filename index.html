@@ -76,7 +76,7 @@
 					Server：<span id="status"> - </span>
 					/ <span id="online">0</span> online.</div>
 			</div>
-			<a class="close" id="close" onclick="close()"><i class="fas fa-times"></i></a>
+			<a class="close" id="close" onclick="onDialogClose()"><i class="fas fa-times"></i></a>
 		</div>
 		<div id="content"></div>
 		<div id="send-box">
@@ -114,11 +114,6 @@
 	</div>
 	<script>
 		// 只在首頁作
-		function close() {
-			app.get("#container").style.display = "none";
-			console.log("HELLO");
-		}
-		
 		document.addEventListener("DOMContentLoaded", () => {
 			setTimeout(() => {
 				console.log(app.userId)
@@ -130,8 +125,12 @@
 			app.get("#container").style.display = "block";
 		}
 
+		function onDialogClose() {
+			app.get("#container").style.display = "none";
+			console.log("HELLO");
+		}
 	</script>
-	<!-- <script src="js/chatroom.js"></script> -->
+	<script src="js/chatroom.js"></script>
 </body>
 
 </html>
