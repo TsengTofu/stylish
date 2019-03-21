@@ -87,13 +87,15 @@
 #send-box {
     width: 100%;
     text-align: center;
-    position: relative;
-    bottom: 5%;
+    position: absolute;
+    bottom: 3%;
 }
 
 #send-box input {
     display: inline-block;
     font-family: "微軟正黑體";
+    border-radius: 8px;
+    border-style:none;
 }
 
 #send-box input.error {
@@ -102,6 +104,7 @@
 
 input[name="name"] {
     width: 12%;
+    
 }
 
 input[name="msg"] {
