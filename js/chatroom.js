@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (document.getElementById('name').value === 'Admin') {
                 new_msg.msg_from = "Admin";
                 new_msg.msg_to = "";
-                document.getElementById('name').insertBefore('<i class="fas fa-bullhorn"></i>');
 
             } else {
                 new_msg.msg_from = document.getElementById('name').value;
