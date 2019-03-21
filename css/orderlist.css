@@ -86,8 +86,7 @@
     display: flex;
 }
 
-
-.order_item_alone_content img{
+.order_item_alone_content .outerImg{
     width:16%;
     align-self: left;
 }
