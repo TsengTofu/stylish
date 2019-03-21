@@ -571,29 +571,34 @@ app.getUserOrderList = function (id) {
 							orderAloneItemImg.src = main_image;
 							orderAloneItem.appendChild(orderAloneItemImg);
 
+							// 這個是最上層
 							const orderDetails = document.querySelector(".order_detail");
 							orderDetails.appendChild(orderAloneItem);
 
 							// 右邊區塊-----------------------------------------------
-							//   const ItemRight = document.querySelector(".right_content");
+							const ItemRight = document.createElement("div");
+							ItemRight.className = "right_content";
+							orderAloneItem.appendChild(ItemRight);
 
-							//   const ItemTitle = document.querySelector(".item_title");
-							//   ItemTitle.innerHTML = title;
+							const ItemTitle = document.createElement("p");
+							ItemTitle.className ="item_title";
+							ItemTitle.innerHTML = title;
+							orderAloneItem.appendChild(ItemTitle);
 
-							//   const ItemID = document.querySelector(".item_id");
-							//   ItemID.innerHTML = id;
+							// const ItemID = document.querySelector(".item_id");
+							// ItemID.innerHTML = id;
 
-							//   const ItemColor = document.querySelector(".item_color");
-							//   ItemColor.innerHTML = color.name;
+							// const ItemColor = document.querySelector(".item_color");
+							// ItemColor.innerHTML = color.name;
 
-							//   const ItemSize = document.querySelector(".item_size");
-							//   ItemSize.innerHTML = size;
+							// const ItemSize = document.querySelector(".item_size");
+							// ItemSize.innerHTML = size;
 
-							//   const ItemPrice = document.querySelector(".item_price");
-							//   ItemPrice.innerHTML = price;
+							// const ItemPrice = document.querySelector(".item_price");
+							// ItemPrice.innerHTML = price;
 
-							//   const ItemQty = document.querySelector(".item_qty");
-							//   ItemQty.innerHTML = qty;
+							// const ItemQty = document.querySelector(".item_qty");
+							// ItemQty.innerHTML = qty;
 
 
 
