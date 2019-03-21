@@ -68,7 +68,13 @@
 .chattingText{
     font-size: 2em;
     font-weight: bold;
+    line-height: 1.5;
 }
+
+#status-box{
+    color:#eee;
+}
+
 
 .close{
     font-size: 2em;
