@@ -45,10 +45,6 @@
     margin: 0 auto;
     overflow: auto;
     padding: 10px;
-    /* ------------ */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .flexChat {
@@ -141,8 +137,7 @@ input[type="button"] {
     margin: 0 auto;
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
-    /* Adjust as needed */
-    animation: typing 3s steps(20, end), blink-caret .5s step-end infinite;
+    animation: typing 3s steps(10, end), blink-caret .5s step-end infinite;
 }
 
 @keyframes typing {
