@@ -476,7 +476,10 @@ app.getUserOrderList = function(id) {
 	  const { order_no, order_time, order_details, status } = data;
 	  console.log(data.order_time);
       let currentUrl = window.location.href;
-      console.log(currentUrl);
+	  console.log(currentUrl);
+	  cconsole.log(urrentUrl.searchParams);
+
+	  
       if (currentUrl.includes("orderlist")) {
         alert("url contains orderlist");
         // 如果是在orderlist頁面
