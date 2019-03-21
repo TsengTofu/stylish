@@ -426,9 +426,8 @@ app.getUser = function(id) {
           // console.log(date[1]);
           // console.log(date[2]);
           date = date[2] + "/" + date[0] + "/" + date[1];
-          const orderTime = document.createElement("p");
-          orderTime.className = "order_time";
-          orderTime.innerHTML = "訂單時間" + `${date}`;
+          const orderTime = document.querySelector("order_time");
+          orderTime.innerHTML = "訂單時間：" + `${date}`;
 
           // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
           let orderStatus = status;
@@ -508,19 +507,19 @@ app.getUserOrderList = function(id) {
             if (orderStatus === 3) {
               truckMove.style.left = "66%";
               // 出貨狀態
-              statusText.innerHTML = "訂單已完成";
+              statusText.innerHTML = "訂單狀態：已完成";
             } else if (orderStatus === 2) {
               truckMove.style.left = "46%";
               // 出貨狀態
-              statusText.innerHTML = "訂單待簽收";
+              statusText.innerHTML = "訂單狀態：待簽收";
             } else if (orderStatus === 1) {
               truckMove.style.left = "26%";
               // 出貨狀態
-              statusText.innerHTML = "訂單出貨中";
+              statusText.innerHTML = "訂單狀態：出貨中";
             } else {
               truckMove.style.left = "6%";
               // 出貨狀態
-              statusText.innerHTML = "訂單待出貨";
+              statusText.innerHTML = "訂單狀態：待出貨";
             }
             // 這邊改動小車車的位置------------------------
             // 訂單時間 組字串
