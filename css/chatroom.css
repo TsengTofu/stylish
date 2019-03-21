@@ -87,6 +87,8 @@
 #send-box {
     width: 100%;
     text-align: center;
+    position: relative;
+    bottom: 5%;
 }
 
 #send-box input {
@@ -113,6 +115,7 @@ input[type="button"] {
 .leftMsg {
     display: flex;
     justify-content: flex-start;
+    transition: ease-in;
 }
 
 .rightMsg {
