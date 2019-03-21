@@ -485,7 +485,14 @@ app.getUserOrderList = function(id) {
         // 找到訂單編號的意思
 
         data.forEach(item => {
-          const { order_no, order_time, order_details, status, color, main_image } = item;
+          const {
+            order_no,
+            order_time,
+            order_details,
+            status,
+            color,
+            main_image
+          } = item;
           console.log(order_no);
           let dataOrderNum = order_no;
           if (currentOrderIDNum === dataOrderNum) {
@@ -522,36 +529,33 @@ app.getUserOrderList = function(id) {
             date = date[2] + "/" + date[0] + "/" + date[1];
             console.log(`${date}`);
 
-			console.log(order_details.list);
-			let orderDetailList = order_details.list;
-			// orderList 每筆訂單的內容
-			orderDetailList.forEach(item => {
-				const { color } = item;
-				console.log(color);
-			
-			})
-
+            console.log(order_details.list);
+            let orderDetailList = order_details.list;
+            // orderList 每筆訂單的內容
+            orderDetailList.forEach(item => {
+              const { color, id, main_image } = item;
+			  console.log(color.name);
+			  console.log(id);
+			  console.log(main_image);
+              // console.log(price);
+              // console.log(qty);
+              // console.log(size);
+              // console.log(title);
+              // console.log(order_details.freight);
+              // console.log(order_details.total);
+              // console.log(order_details.payment);
+              // console.log(order_details.shipping);
+              // console.log(order_details.subtotal);
+              // console.log(order_details.recipient);
+              // console.log(order_details.recipient.name);
+              // console.log(order_details.recipient.email);
+              // console.log(order_details.recipient.time);
+              // console.log(order_details.recipient.phone);
+              // console.log(order_details.recipient.address);
+            });
 
             console.log(status);
-            
-            // 顏色要再額外抓
-            // console.log(order_details.list.id);
-            // console.log(main_image);
-            // console.log(price);
-            // console.log(qty);
-            // console.log(size);
-            // console.log(title);
-            // console.log(order_details.freight);
-            // console.log(order_details.total);
-            // console.log(order_details.payment);
-            // console.log(order_details.shipping);
-            // console.log(order_details.subtotal);
-            // console.log(order_details.recipient);
-            // console.log(order_details.recipient.name);
-            // console.log(order_details.recipient.email);
-            // console.log(order_details.recipient.time);
-            // console.log(order_details.recipient.phone);
-            // console.log(order_details.recipient.address);
+
             // render createElement
             // 訂單號碼
             const orderlistID = document.querySelector(".order_id");
