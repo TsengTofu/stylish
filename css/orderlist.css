@@ -82,6 +82,19 @@
     margin: 25px auto;
 }
 
+.order_item_alone_content{
+    display: flex;
+}
+
+
+.order_item_alone_content img{
+    width:16%;
+    align-self: left;
+}
+
+
+
+
 /* user的個人資訊 */
 
 .getUserInfo {
