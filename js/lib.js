@@ -583,8 +583,10 @@ app.getUserOrderList = function (id) {
 							ItemTitle.innerHTML = title;
 							orderAloneItem.appendChild(ItemTitle);
 
-							// const ItemID = document.querySelector(".item_id");
-							// ItemID.innerHTML = id;
+							const ItemID = document.createElement("p");
+							ItemID.className = "item_id";
+							ItemID.innerHTML = id;
+							orderAloneItem.appendChild(ItemID);
 
 							// const ItemColor = document.querySelector(".item_color");
 							// ItemColor.innerHTML = color.name;
@@ -597,7 +599,7 @@ app.getUserOrderList = function (id) {
 
 							// const ItemQty = document.querySelector(".item_qty");
 							// ItemQty.innerHTML = qty;
-							
+
 							// 這個是最上層
 							const orderDetails = document.querySelector(".order_detail");
 							orderDetails.appendChild(orderAloneItem);
