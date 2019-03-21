@@ -474,10 +474,9 @@ app.getUserOrderList = function(id) {
       console.log(req.responseText);
 	  console.log(data);
 	  const { order_no, order_time, order_details, status } = data;
-	  console.log(data.order_time);
       let currentUrl = window.location.href;
 	  console.log(currentUrl);
-	  console.log(currentUrl.searchParams);
+	  console.log(currentUrl.search);
 
 	  
       if (currentUrl.includes("orderlist")) {
