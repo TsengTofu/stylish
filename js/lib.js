@@ -556,7 +556,7 @@ app.getUserOrderList = function(id) {
               // render createElement
               // 訂單號碼
               const orderlistID = document.querySelector(".order_id");
-              orderlistID.innerHTML = "訂單編號" + `${dataOrderNum}`;
+              orderlistID.innerHTML = "訂單編號：" + `${dataOrderNum}`;
               console.log(`${dataOrderNum}`);
             });
           }
