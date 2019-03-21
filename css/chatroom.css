@@ -136,8 +136,8 @@ input[name="msg"] {
     transition: ease-in;
 }
 
-.leftMsg .name::before{
-    content: attr('<i class="fas fa-bullhorn"></i>');
+.leftMsg .name::after{
+    content: "|";
     display: flex;
 }
 
