@@ -529,7 +529,7 @@ app.getUserOrderList = function (id) {
 						orderTime.innerHTML = "訂單時間：" + `${date}`;
 
 						console.log(order_details.list);
-						console.log(order_details.length);
+						console.log(order_details);
 						// 思考要不要用for迴圈
 						let orderDetailList = order_details.list;
 						// orderList 每筆訂單的內容
