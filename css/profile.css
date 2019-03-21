@@ -89,12 +89,11 @@ main>.view {
 }
 
 .collect_img {
-	width: 20%;
-	align-self: left;
+	width: 16%;
 }
 
 .right_content{
-	width: 52%;
+	width: 40%;
 	padding: 20px;
 }
 
@@ -104,6 +103,7 @@ main>.view {
 }
 
 .collect_btn {
+	width: 25%;
 	background: #313538;
 	color: #fff;
 	padding: 10px;
