@@ -58,8 +58,12 @@
     flex-wrap: wrap;
 }
 
+.leftBox{
+    widows: 70%;
+    flex-direction: column;
+}
+
 .chattingText{
-    width: 40%;
     font-size: 1.5em;
 
 }
