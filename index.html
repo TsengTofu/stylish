@@ -114,6 +114,11 @@
 	</div>
 	<script>
 		// 只在首頁作
+		function close() {
+			app.get("#container").style.display = "none";
+			console.log("HELLO");
+		}
+		
 		document.addEventListener("DOMContentLoaded", () => {
 			setTimeout(() => {
 				console.log(app.userId)
@@ -125,10 +130,6 @@
 			app.get("#container").style.display = "block";
 		}
 
-		function close() {
-			app.get("#container").style.display = "none";
-			console.log("HELLO");
-		}
 	</script>
 	<!-- <script src="js/chatroom.js"></script> -->
 </body>
