@@ -95,6 +95,11 @@ main>.view {
 
 .right_content{
 	width: 65%;
+	padding: 20px;
+}
+
+.collection_title{
+	font-size: 2em;
 }
 
 .collect_btn {
