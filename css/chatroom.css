@@ -72,12 +72,14 @@
 }
 
 #status-box {
-    color: #eee;
+    color: #888;
 }
 
 .close {
     font-size: 3em;
-    width: 20%;
+    width: 10%;
+    align-self: right;
+    padding-right: 1vw;
 }
 
 
