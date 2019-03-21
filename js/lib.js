@@ -483,18 +483,6 @@ app.getUserOrderList = function(id) {
         data.forEach(item => {
           const { order_no, order_time, order_details, status } = item;
 
-          // createElement--------------------------------------
-          // 訂單號碼
-          const orderlistID = document.querySelector(".order_id");
-          orderlistID.innerHTML = "訂單編號" + `${order_no}`;
-          console.log(`${order_no}`);
-
-          // 訂單時間 組字串
-          let date = order_time;
-          date = date.split("/");
-          date = date[2] + "/" + date[0] + "/" + date[1];
-          console.log(`${date}`);
-
           // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
           // 這邊改動小車車的位置
           let orderStatus = status;
@@ -511,12 +499,28 @@ app.getUserOrderList = function(id) {
             truckMove.style.left = "6%";
           }
 
+          // createElement--------------------------------------
+          //   // 訂單號碼
+          //   const orderlistID = document.querySelector(".order_id");
+          //   orderlistID.innerHTML = "訂單編號" + `${order_no}`;
+          //   console.log(`${order_no}`);
+
+          // 訂單時間 組字串
+          let date = order_time;
+          date = date.split("/");
+          date = date[2] + "/" + date[0] + "/" + date[1];
+          console.log(`${date}`);
+
           console.log(order_details.list);
           // orderList 每筆訂單的內容
           let orderListAlone = order_details.list;
           orderListAlone.forEach(item => {
             const { color, id, main_image, price, qty, size, title } = item;
 
+            // 訂單號碼
+              const orderlistID = document.querySelector(".order_id");
+              orderlistID.innerHTML = "訂單編號" + `${order_no}`;
+              console.log(`${order_no}`);
             // 要想辦法把status帶進去
             console.log(status);
             console.log(color);
