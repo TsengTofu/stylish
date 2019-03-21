@@ -59,7 +59,7 @@
 }
 
 .leftBox{
-    widows: 70%;
+    width: 70%;
     flex-direction: column;
 }
 
