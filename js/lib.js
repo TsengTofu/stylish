@@ -200,7 +200,6 @@ app.fb.loginStatusChange = function (response) {
 			let cecRoom = document.getElementById("csc");
 			cecRoom.setAttribute("href", "/chat/1111");
 		}
-		// 沒登入-----
 	}
 	if (typeof app.fb.statusChangeCallback === "function") {
 		app.fb.statusChangeCallback();
