@@ -536,11 +536,12 @@ app.getUserOrderList = function(id) {
             console.log(order_details.recipient.address);
             // render createElement
           });
-          // 訂單號碼
-          const orderlistID = document.querySelector(".order_id");
-          orderlistID.innerHTML = "訂單編號" + `${order_no}`;
-          console.log(`${order_no}`);
-        });
+          
+		});
+		// 訂單號碼
+		const orderlistID = document.querySelector(".order_id");
+		orderlistID.innerHTML = "訂單編號" + `${order_no}`;
+		console.log(`${order_no}`);
       }
     }
   );
