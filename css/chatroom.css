@@ -62,12 +62,12 @@
     width: 70%;
     flex-direction: column;
     text-align: left;
+    padding-left: 1vw;
 }
 
 .chattingText{
     font-size: 2em;
     font-weight: bold;
-
 }
 
 .close{
