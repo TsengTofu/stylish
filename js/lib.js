@@ -563,7 +563,7 @@ app.getUserOrderList = function(id) {
 			  const orderAloneItemImg = document.querySelector(".order_item_alone_content img");
 			  orderAloneItemImg.src = main_image;
 
-			  // 右邊區塊
+			  // 右邊區塊-----------------------------------------------
 			  const ItemRight = document.querySelector(".right_content");
 
 			  const ItemTitle = document.querySelector(".item_title");
@@ -574,6 +574,16 @@ app.getUserOrderList = function(id) {
 
 			  const ItemColor = document.querySelector(".item_color");
 			  ItemColor.innerHTML = color.name;
+
+			  const ItemSize = document.querySelector(".item_size");
+			  ItemSize.innerHTML = size;
+
+			  const ItemPrice = document.querySelector(".item_price");
+			  ItemPrice.innerHTML = price;
+
+			  const ItemQty = document.querySelector(".item_qty");
+			  ItemQty.innerHTML = qty;
+
 
 
 			  
