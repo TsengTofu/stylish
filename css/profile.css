@@ -44,7 +44,12 @@ main>.view {
 	border-radius: .125rem;
 	text-align: left;
 	margin-top: 1vw;
+	display:flex;
 }
+.order_num, .order_time, .order_statusValue, .orderAList_btn{
+	width: 25%;
+}
+
 
 /* 查看單筆訂單的按鈕 */
 
