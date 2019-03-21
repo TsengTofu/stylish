@@ -426,8 +426,9 @@ app.getUser = function(id) {
           // console.log(date[1]);
           // console.log(date[2]);
           date = date[2] + "/" + date[0] + "/" + date[1];
-          const orderTime = document.querySelector("order_time");
-          orderTime.innerHTML = "訂單時間：" + `${date}`;
+          const orderTime = document.createElement("p");
+          orderTime.className = "order_time";
+          orderTime.innerHTML = "訂單時間" + `${date}`;
 
           // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
           let orderStatus = status;
@@ -526,7 +527,9 @@ app.getUserOrderList = function(id) {
             let date = order_time;
             date = date.split("/");
             date = date[2] + "/" + date[0] + "/" + date[1];
-            console.log(`${date}`);
+			console.log(`${date}`);
+			const orderTime = document.querySelector(".order_time");
+			orderTime.innerHTML = "訂單時間："+ `${date}`;
 
             console.log(order_details.list);
             let orderDetailList = order_details.list;
