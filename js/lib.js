@@ -426,7 +426,7 @@ app.getUser = function (id) {
 					const orderNum = document.createElement("p");
 					orderNum.className = "order_num";
 					console.log(`${order_no}`);
-					orderNum.innerHTML = "訂單編號" + `${order_no}`;
+					orderNum.innerHTML = "訂單編號：" + `${order_no}`;
 
 					// 訂單時間
 					let date = order_time;
@@ -438,7 +438,7 @@ app.getUser = function (id) {
 					date = date[2] + "/" + date[0] + "/" + date[1];
 					const orderTime = document.createElement("p");
 					orderTime.className = "order_time";
-					orderTime.innerHTML = "訂單時間" + `${date}`;
+					orderTime.innerHTML = "訂單時間：" + `${date}`;
 
 					// 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
 					let orderStatus = status;
@@ -446,10 +446,13 @@ app.getUser = function (id) {
 					orderStatus_element.className = "order_statusValue";
 					if (orderStatus === 3) {
 						orderStatus_element.innerHTML = "物流狀態：完成訂單";
+						orderStatus_element.style.color = "#b8d149";
 					} else if (orderStatus === 2) {
 						orderStatus_element.innerHTML = "物流狀態：待簽收";
+						orderStatus_element.style.color = "#f4bf42";
 					} else if (orderStatus === 1) {
 						orderStatus_element.innerHTML = "物流狀態：出貨中";
+						orderStatus_element.style.color = "#488fd1";
 					} else {
 						orderStatus_element.innerHTML = "物流狀態：待出貨";
 					}
