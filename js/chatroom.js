@@ -3,7 +3,7 @@ function getCookie(name) {
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
 }
-var socket = io();
+var socket = io("https://j-zone.xyz");
 let record_msg = null;
 let isSign = false
 document.addEventListener("DOMContentLoaded", () => {
