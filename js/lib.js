@@ -571,8 +571,6 @@ app.getUserOrderList = function (id) {
 							orderAloneItemImg.src = main_image;
 							orderAloneItem.appendChild(orderAloneItemImg);
 
-
-
 							// 右邊區塊-----------------------------------------------
 							const ItemRight = document.createElement("div");
 							ItemRight.className = "right_content";
@@ -587,15 +585,21 @@ app.getUserOrderList = function (id) {
 							ItemID.className = "item_id";
 							ItemID.innerHTML = id;
 							orderAloneItem.appendChild(ItemID);
+							
+							const ItemColor = document.createElement("p");
+							ItemColor.className = "item_color";
+							ItemColor.innerHTML = color.name;
+							orderAloneItem.appendChild(ItemColor);
 
-							// const ItemColor = document.querySelector(".item_color");
-							// ItemColor.innerHTML = color.name;
+							const ItemSize = document.createElement("p");
+							ItemSize.className = "item_size";
+							ItemSize.innerHTML = size;
+							orderAloneItem.appendChild(ItemSize);
 
-							// const ItemSize = document.querySelector(".item_size");
-							// ItemSize.innerHTML = size;
-
-							// const ItemPrice = document.querySelector(".item_price");
-							// ItemPrice.innerHTML = price;
+							const ItemPrice = document.createElement("p");
+							ItemPrice.className="item_price";
+							ItemPrice.innerHTML = price;
+							orderAloneItem.appendChild(ItemPrice);
 
 							// const ItemQty = document.querySelector(".item_qty");
 							// ItemQty.innerHTML = qty;
