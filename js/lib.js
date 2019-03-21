@@ -481,7 +481,7 @@ app.getUserOrderList = function(id) {
 
         // 填資料
 
-        // const { order_no, order_time, order_details, status } = item;
+        const { order_no, order_time, order_details, status } = item;
 
         // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
         // 這邊改動小車車的位置------------------------
@@ -510,7 +510,7 @@ app.getUserOrderList = function(id) {
         // orderList 每筆訂單的內容
         let orderListAlone = order_details.list;
 
-        // const { color, id, main_image, price, qty, size, title } = item;
+        const { color, id, main_image, price, qty, size, title } = item;
 
         // 要想辦法把status帶進去
         console.log(status);
