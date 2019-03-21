@@ -473,19 +473,19 @@ app.getUserOrderList = function(id) {
       let data = JSON.parse(req.responseText);
       console.log(req.responseText);
       console.log(data);
-	  const { order_no, order_time, order_details, status } = data;
-	  console.log(data);
+      const { order_no, order_time, order_details, status } = data;
+      console.log(data);
+      let currentUrl = window.location.href;
       if (currentUrl.includes("orderlist")) {
         alert("url contains orderlist");
         // 如果是在orderlist頁面
         let currentUrl_product = new URL(window.location.href);
         console.log(currentUrl_product);
-		console.log(currentUrl_product.searchParams.get("id"));
-		const orderIDNum = currentUrl_product.searchParams.get("id");
-        // 找到訂單編號的意思
-
-
+        console.log(currentUrl_product.searchParams.get("id"));
+        const orderIDNum = currentUrl_product.searchParams.get("id");
+		// 找到訂單編號的意思
 		
+
         // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
         // 這邊改動小車車的位置------------------------
         let orderStatus = status;
