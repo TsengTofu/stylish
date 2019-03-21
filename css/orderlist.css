@@ -87,6 +87,7 @@
     border: 1px solid #000;
     border-radius: .125rem;
     padding: 1vw;
+    margin:20px 0;
 }
 
 .order_item_alone_content .outerImg {
