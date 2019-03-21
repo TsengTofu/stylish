@@ -529,7 +529,7 @@ app.getUserOrderList = function (id) {
 						orderTime.innerHTML = "訂單時間：" + `${date}`;
 
 						console.log(order_details.list);
-						console.log(order_details.list.length);
+						console.log(order_details.length);
 						// 思考要不要用for迴圈
 						let orderDetailList = order_details.list;
 						// orderList 每筆訂單的內容
@@ -559,22 +559,17 @@ app.getUserOrderList = function (id) {
 							console.log(order_details.recipient.phone);
 							console.log(order_details.recipient.address);
 
-							for (let i = 0; i < orderDetailList.length; i++) {
-								// render createElement
-								// 訂單號碼
-								alert("有抓到")
-								const orderlistID = document.querySelector(".order_id");
-								orderlistID.innerHTML = "訂單編號：" + `${dataOrderNum}`;
-								console.log(`${dataOrderNum}`);
+							const orderlistID = document.querySelector(".order_id");
+							orderlistID.innerHTML = "訂單編號：" + `${dataOrderNum}`;
+							console.log(`${dataOrderNum}`);
 
-								// 單品項
-								const orderAloneItem = document.createElement("div");
-								orderAloneItem.className = "order_item_alone_content";
+							// 單品項
+							const orderAloneItem = document.createElement("div");
+							orderAloneItem.className = "order_item_alone_content";
 
-								const orderAloneItemImg = document.createElement("img");
-								orderAloneItemImg.src = main_image;
-								orderAloneItem.appendChild(orderAloneItemImg);
-							}
+							const orderAloneItemImg = document.createElement("img");
+							orderAloneItemImg.src = main_image;
+							orderAloneItem.appendChild(orderAloneItemImg);
 
 							// 右邊區塊-----------------------------------------------
 							//   const ItemRight = document.querySelector(".right_content");
