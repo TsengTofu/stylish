@@ -485,7 +485,7 @@ app.getUserOrderList = function(id) {
 
         // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
         // 這邊改動小車車的位置------------------------
-        let orderStatus = data.status;
+        let orderStatus = status;
         const truckMove = document.querySelector("#lottie");
         console.log(truckMove);
         console.log(orderStatus);
