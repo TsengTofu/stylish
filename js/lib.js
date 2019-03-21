@@ -423,7 +423,7 @@ app.getUser = function (id) {
 					// createElement--------------------------------------
 					const orderListItem = document.createElement("div");
 					orderListItem.className = "order_list_items";
-					const orderNum = document.createElement("h4");
+					const orderNum = document.createElement("p");
 					orderNum.className = "order_num";
 					console.log(`${order_no}`);
 					orderNum.innerHTML = "訂單編號" + `${order_no}`;

@@ -45,6 +45,7 @@ main>.view {
 	text-align: left;
 	margin-top: 1vw;
 	display:flex;
+	box-sizing: border-box;
 }
 .order_num, .order_time, .order_statusValue, .orderAList_btn{
 	width: 25%;
