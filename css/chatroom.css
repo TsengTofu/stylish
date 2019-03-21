@@ -1,4 +1,5 @@
 /* btn css */
+
 .service_btn {
     background: #000;
     color: #fff;
@@ -19,8 +20,8 @@
     background: #8b572a;
 }
 
-
 /* chatroom css */
+
 #container {
     width: 25%;
     display: block;
@@ -43,7 +44,11 @@
     background: #ffffff;
     margin: 0 auto;
     overflow: auto;
-    padding:10px;
+    padding: 10px;
+    /* ------------ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .flexChat {
@@ -83,7 +88,6 @@
     cursor: pointer;
 }
 
-
 #send-box {
     width: 100%;
     text-align: center;
@@ -91,6 +95,7 @@
 
 #send-box input {
     display: inline-block;
+    font-family: "微軟正黑體";
 }
 
 #send-box input.error {
@@ -123,11 +128,42 @@ input[type="button"] {
     width: 95%;
     padding: 5px 5px 5px 10px;
     background: #000;
-    color:#fff;
-    border-radius:8px;
-    margin:10px 0 0 0;
+    color: #fff;
+    border-radius: 8px;
+    margin: 10px auto 0;
+    /* ------------- */
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #fff;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3s steps(20, end), blink-caret .5s step-end infinite;
 }
 
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    0% {
+        border-color: transparent
+    }
+    50% {
+        border-color: #fff
+    }
+}
 
 .msg>span {
     width: 18%;
@@ -136,15 +172,15 @@ input[type="button"] {
 }
 
 /* RWD */
+
 @media (max-width:1000px) {
-    .service_btn{
+    .service_btn {
         position: fixed;
         bottom: 10%;
     }
-
-    #container{
+    #container {
         width: 75%;
         height: 200px;
-        bottom:5%;
+        bottom: 5%;
     }
 }
