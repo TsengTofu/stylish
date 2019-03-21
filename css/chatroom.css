@@ -134,3 +134,17 @@ input[type="button"] {
     text-align: center;
     display: inline-block;
 }
+
+/* RWD */
+@media (max-width:1000px) {
+    .service_btn{
+        position: fixed;
+        bottom: 10%;
+    }
+
+    #container{
+        width: 75%;
+        height: 200px;
+        bottom:5%;
+    }
+}
