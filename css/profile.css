@@ -51,6 +51,7 @@ main>.view {
 	width: 25%;
 	box-sizing: border-box;
 	padding: 10px;
+	text-align: center;
 }
 
 
