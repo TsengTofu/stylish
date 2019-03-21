@@ -499,49 +499,46 @@ app.getUserOrderList = function(id) {
             truckMove.style.left = "6%";
           }
 
-
-
           // 訂單時間 組字串
           let date = order_time;
           date = date.split("/");
           date = date[2] + "/" + date[0] + "/" + date[1];
           console.log(`${date}`);
 
-          console.log(order_details.list);
-          // orderList 每筆訂單的內容
-          let orderListAlone = order_details.list;
-          orderListAlone.forEach(item => {
-            const { color, id, main_image, price, qty, size, title } = item;
+          // 訂單號碼
+          const orderlistID = document.querySelector(".order_id");
+          orderlistID.innerHTML = "訂單編號" + `${order_no}`;
+          console.log(`${order_no}`);
+        });
+        console.log(order_details.list);
+        // orderList 每筆訂單的內容
+        let orderListAlone = order_details.list;
+        orderListAlone.forEach(item => {
+          const { color, id, main_image, price, qty, size, title } = item;
 
-            // 要想辦法把status帶進去
-            console.log(status);
-            console.log(color);
-            // 顏色要再額外抓
-            console.log(id);
-            console.log(main_image);
-            console.log(price);
-            console.log(qty);
-            console.log(size);
-            console.log(title);
-            console.log(order_details.freight);
-            console.log(order_details.total);
-            console.log(order_details.payment);
-            console.log(order_details.shipping);
-            console.log(order_details.subtotal);
-            console.log(order_details.recipient);
-            console.log(order_details.recipient.name);
-            console.log(order_details.recipient.email);
-            console.log(order_details.recipient.time);
-            console.log(order_details.recipient.phone);
-            console.log(order_details.recipient.address);
-            // render createElement
-          });
-          
-		});
-		// 訂單號碼
-		const orderlistID = document.querySelector(".order_id");
-		orderlistID.innerHTML = "訂單編號" + `${order_no}`;
-		console.log(`${order_no}`);
+          // 要想辦法把status帶進去
+          console.log(status);
+          console.log(color);
+          // 顏色要再額外抓
+          console.log(id);
+          console.log(main_image);
+          console.log(price);
+          console.log(qty);
+          console.log(size);
+          console.log(title);
+          console.log(order_details.freight);
+          console.log(order_details.total);
+          console.log(order_details.payment);
+          console.log(order_details.shipping);
+          console.log(order_details.subtotal);
+          console.log(order_details.recipient);
+          console.log(order_details.recipient.name);
+          console.log(order_details.recipient.email);
+          console.log(order_details.recipient.time);
+          console.log(order_details.recipient.phone);
+          console.log(order_details.recipient.address);
+          // render createElement
+        });
       }
     }
   );
