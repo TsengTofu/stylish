@@ -93,6 +93,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 #send-box input {
@@ -118,6 +119,9 @@ input[name="msg"] {
 
 input[type="button"] {
     width: 12%;
+    border-style: none;
+    background: #000;
+    color: #fff;
 }
 
 .leftMsg {
