@@ -598,7 +598,7 @@ app.getUserOrderList = function (id) {
 
 							const ItemPrice = document.createElement("p");
 							ItemPrice.className="item_price";
-							ItemPrice.innerHTML = price;
+							ItemPrice.innerHTML = "NT$" + `${price}`;
 							orderAloneItem.appendChild(ItemPrice);
 
 							// const ItemQty = document.querySelector(".item_qty");
