@@ -497,14 +497,23 @@ app.getUserOrderList = function(id) {
             const truckMove = document.querySelector("#lottie");
             console.log(truckMove);
             console.log(orderStatus);
+            const statusText = document.querySelector(".shipping_status");
             if (orderStatus === 3) {
               truckMove.style.left = "66%";
+              // 出貨狀態
+              statusText.innerHTML = "訂單已完成";
             } else if (orderStatus === 2) {
               truckMove.style.left = "46%";
+              // 出貨狀態
+              statusText.innerHTML = "訂單待簽收";
             } else if (orderStatus === 1) {
               truckMove.style.left = "26%";
+              // 出貨狀態
+              statusText.innerHTML = "訂單出貨中";
             } else {
               truckMove.style.left = "6%";
+              // 出貨狀態
+              statusText.innerHTML = "訂單待出貨";
             }
             // 這邊改動小車車的位置------------------------
             // 訂單時間 組字串
@@ -539,10 +548,7 @@ app.getUserOrderList = function(id) {
             // 訂單號碼
             const orderlistID = document.querySelector(".order_id");
             orderlistID.innerHTML = "訂單編號" + `${dataOrderNum}`;
-			console.log(`${dataOrderNum}`);
-			
-			// 出貨狀態
-			
+            console.log(`${dataOrderNum}`);
           }
         });
       }
