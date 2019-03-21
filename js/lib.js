@@ -522,9 +522,9 @@ app.getUserOrderList = function(id) {
             console.log(order_details.recipient.time);
             console.log(order_details.recipient.phone);
             console.log(order_details.recipient.address);
-            // render createElement
-          });
-          // 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
+			// render createElement
+			
+			// 3=完成, 2=待簽收, 1=出貨中, 0=待出貨
           // 這邊改動小車車的位置
           let orderStatus = status;
           const truckMove = document.querySelector("#lottie");
@@ -539,6 +539,8 @@ app.getUserOrderList = function(id) {
           } else {
             truckMove.style.left = "6%";
           }
+          });
+          
         });
       }
     }
