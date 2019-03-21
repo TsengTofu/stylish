@@ -121,6 +121,9 @@ input[type="button"] {
 .msg {
     width: 95%;
     padding: 5px 5px 5px 10px;
+    background: #000;
+    color:#fff;
+    border-radius:8px;
 }
 
 
@@ -128,6 +131,4 @@ input[type="button"] {
     width: 18%;
     text-align: center;
     display: inline-block;
-    background: #000;
-    color:#fff;
 }
