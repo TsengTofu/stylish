@@ -68,7 +68,7 @@ main>.view {
 	line-height: 3.3;
 }
 
-.orderAList_btn:hover{
+.orderAList_btn:hover, .collect_btn:hover{
 	background:#979797;
 }
 
