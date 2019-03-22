@@ -113,6 +113,10 @@ main>.view {
 	text-align: center;
 }
 
+.collect_delete_range{
+	widows: 19%;
+}
+
 .collect_btn_delete {
 	background: url("../imgs/cart-remove.png");
 	display: block;
