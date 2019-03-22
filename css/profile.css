@@ -116,8 +116,7 @@ main>.view {
 }
 
 .collect_delete_range{
-	width: 19%;
-	text-align: center;
+	width: 15%;
 }
 
 .collect_btn_delete {
@@ -125,6 +124,7 @@ main>.view {
 	display: block;
 	width: 40px;
 	height: 40px;
+	margin:0 auto;
 }
 
 .collect_btn_delete:hover {
