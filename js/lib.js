@@ -704,7 +704,7 @@ app.getUserKeep = function (id) {
 				// <a href="#" id="collect_btn">產品細節</a>
 				const collect_btn = document.createElement("a");
 				collect_btn.className = "collect_btn";
-				collect_btn.innerHTML = "產品細節"+ `  <i class="fas fa-arrow-circle-right"></i>`;;
+				collect_btn.innerHTML = "產品細節" + `  <i class="fas fa-arrow-circle-right"></i>`;;
 				// 可以連結到收藏的產品頁面
 				collect_btn.setAttribute("href", `./product.html?id=${id}`);
 
@@ -807,7 +807,3 @@ app.deleteUserProductKeep = function () {
 		});
 	}
 };
-
-
-
-
