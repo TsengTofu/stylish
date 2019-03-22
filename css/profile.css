@@ -116,7 +116,8 @@ main>.view {
 }
 
 .collect_delete_range{
-	widows: 19%;
+	width: 19%;
+	text-align: center;
 }
 
 .collect_btn_delete {
