@@ -750,7 +750,7 @@ app.getUserProductKeep = function (id) {
 	let currentUrl = window.location.href;
 	console.log(currentUrl);
 	if (currentUrl.includes("product.html")) {
-		alert("url contains product! 這是產品頁面");
+		// alert("url contains product! 這是產品頁面");
 		var productDetailUrl = new URL(window.location.href);
 		var params = productDetailUrl.searchParams;
 		console.log(productDetailUrl);
