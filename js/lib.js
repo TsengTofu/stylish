@@ -769,27 +769,11 @@ app.getUserProductKeep = function (id) {
 					// 收藏再點一次就取消
 					app.setEventHandlers(app.get("#collection_btn"), {
 						click: function () {
-							let keepStatus = false;
-							if (app.state.keep) {
-								app.state.keep = false;
-								keepStatus = false;
-							} else {
-								app.state.keep = true;
-								keepStatus = true;
-								app.get(".btn_content").innerHTML = `<i class="fas fa-heart" id="already_collection"></i>` + "已加入收藏";
-								app.get("#already_collection").style.display = "initial";
-								alert("已加入收藏！");
-								// 這邊試試看
-								app.setEventHandlers(app.get("#collection_btn"), {
-									click: function () {
-										let keepStatus = false;
-										app.get(".btn_content").innerHTML = `<i class="far fa-frown"></i>` + "取消收藏";
-										alert("已取消收藏！");
-									}
-								})
-								// 這邊試試看
-							}
-
+							let keepStatus = data.keep;
+							keepStatus = true;
+							app.get(".btn_content").innerHTML = `<i class="fas fa-heart" id="already_collection"></i>` + "已加入收藏";
+							app.get("#already_collection").style.display = "initial";
+							alert("已加入收藏！");
 
 							let requestData = {
 								"user_id": app.userId,
@@ -805,7 +789,19 @@ app.getUserProductKeep = function (id) {
 									console.log("Success!");
 								}
 							});
+							// 這邊試試看
+							app.setEventHandlers(app.get("#collection_btn"), {
+								click: function () {
+									let keepStatus = false;
+									app.get(".btn_content").innerHTML = `<i class="far fa-frown"></i>` + "取消收藏";
+									alert("已取消收藏！");
+								}
+							})
+							// 這邊試試看
 						}
+
+
+
 					});
 
 					// 加入收藏的btn------------------------------------------------
