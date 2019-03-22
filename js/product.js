@@ -26,8 +26,16 @@ app.init = function () {
 			} else {
 				app.state.keep = true;
 				keepStatus = true;
-				app.get(".btn_content").innerHTML=`<i class="fas fa-heart" id="already_collection"></i>`+ "已加入收藏";
+				app.get(".btn_content").innerHTML = `<i class="fas fa-heart" id="already_collection"></i>` + "已加入收藏";
 				app.get("#already_collection").style.display = "initial";
+				// 這邊試試看
+				app.setEventHandlers(app.get("#collection_btn"), {
+					click: function () {
+						let keepStatus = false;
+						app.get(".btn_content").innerHTML = `` + "取消收藏";
+					}
+				})
+				// 這邊試試看
 			}
 
 			let requestData = {
@@ -90,9 +98,11 @@ app.showProduct = function () {
 			atrs: {
 				className: "color" + (app.state.variant.color_code === color.code ? " current" : ""),
 				value: color
-			}, stys: {
+			},
+			stys: {
 				backgroundColor: "#" + color.code
-			}, evts: {
+			},
+			evts: {
 				click: app.evts.clickColor
 			}
 		}, colorContainer);
@@ -107,7 +117,8 @@ app.showProduct = function () {
 				className: "size" + (app.state.variant.size === size ? " current" : "") + (outStock ? " disabled" : ""),
 				textContent: size,
 				value: size
-			}, evts: {
+			},
+			evts: {
 				click: app.evts.clickSize
 			}
 		}, sizeContainer);
@@ -129,8 +140,7 @@ app.showProduct = function () {
 			className: "fb_shareBtn",
 			textContent: "Share"
 		}
-	}, app.get(".details")
-	)
+	}, app.get(".details"))
 	let fbShareUrl = window.location.href;
 	// FB Share Btn偵聽事件	
 	app.get("#shareBtn").onclick = function () {
@@ -139,7 +149,7 @@ app.showProduct = function () {
 			method: 'share',
 			display: 'popup',
 			href: `${fbShareUrl}`,
-		}, function (response) { });
+		}, function (response) {});
 	}
 
 	// story
@@ -156,8 +166,8 @@ app.showProduct = function () {
 			frameborder: "0",
 			allowfullscreen: "allowfullscreen"
 		},
-		stys:{
-			borderStyle:"none"
+		stys: {
+			borderStyle: "none"
 		}
 	}, app.get("#product-video"));
 
@@ -172,7 +182,9 @@ app.showProduct = function () {
 };
 app.findVariant = function (colorCode, size) {
 	let product = app.state.product;
-	return product.variants.find((item) => { return item.color_code === colorCode && item.size === size });
+	return product.variants.find((item) => {
+		return item.color_code === colorCode && item.size === size
+	});
 };
 app.refreshProductVariants = function () {
 	let variants = app.state.product.variants;
@@ -242,5 +254,3 @@ app.evts.clickQty = function (e) {
 	}
 };
 window.addEventListener("DOMContentLoaded", app.init);
-
-
