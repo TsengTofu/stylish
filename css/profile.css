@@ -112,6 +112,7 @@ main>.view {
 	padding: 10px;
 	border-radius: 10px;
 	text-align: center;
+	margin: 4vw 0;
 }
 
 .collect_delete_range{
