@@ -95,6 +95,7 @@ main>.view {
 .right_content{
 	width: 40%;
 	padding: 20px;
+	box-sizing: border-box;
 }
 
 .collection_title{
