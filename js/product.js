@@ -32,7 +32,7 @@ app.init = function () {
 				app.setEventHandlers(app.get("#collection_btn"), {
 					click: function () {
 						let keepStatus = false;
-						app.get(".btn_content").innerHTML = `` + "取消收藏";
+						app.get(".btn_content").innerHTML = `<i class="fas fa-trash-alt"></i>` + "取消收藏";
 					}
 				})
 				// 這邊試試看
