@@ -141,22 +141,22 @@ input[name="msg"] {
     transition: ease-in;
 }
 
-.leftMsg .name::after{
+/* .leftMsg .name::after{
     content: "|";
     padding-left: 10px;
     box-sizing: border-box;
-}
+} */
 
 .rightMsg {
     display: flex;
     justify-content: flex-end;
 }
 
-.rightMsg .name::before{
+/* .rightMsg .name::before{
     content: "|";
     padding-right: 10px;
     box-sizing: border-box;
-}
+} */
 
 .msg {
     width: 95%;
