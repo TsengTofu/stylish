@@ -127,6 +127,10 @@ input[name="msg"] {
     cursor: pointer;
 }
 
+#send-form{
+    width: 100%;
+}
+
 #send-box input:nth-child(3):hover{
     background: #666;
 }
