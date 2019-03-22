@@ -30,13 +30,13 @@ app.init = function () {
 				app.get("#already_collection").style.display = "initial";
 				alert("已加入收藏！");
 				// 這邊試試看
-				// app.setEventHandlers(app.get("#collection_btn"), {
-				// 	click: function () {
-				// 		let keepStatus = false;
-				// 		app.get(".btn_content").innerHTML = `<i class="far fa-frown"></i>` + "取消收藏";
-				// 		alert("已取消收藏！");
-				// 	}
-				// })
+				app.setEventHandlers(app.get("#collection_btn"), {
+					click: function () {
+						let keepStatus = false;
+						app.get(".btn_content").innerHTML = `<i class="far fa-frown"></i>` + "取消收藏";
+						alert("已取消收藏！");
+					}
+				})
 				// 這邊試試看
 			}
 
