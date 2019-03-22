@@ -27,7 +27,7 @@ app.init = function () {
 				app.state.keep = true;
 				keepStatus = true;
 				app.get(".btn_content").innerHTML=`<i class="fas fa-heart" id="already_collection"></i>`+ "已加入收藏";
-				app.get("#already_collection").style.display = "block";
+				app.get("#already_collection").style.display = "initial";
 			}
 
 			let requestData = {
