@@ -654,10 +654,9 @@ app.getUserKeep = function (id) {
 	app.ajax("get", app.cst.API_HOST + "/user/keep", "uid=" + id, {}, function (req) {
 		let currentUrl = window.location.href;
 		console.log(currentUrl);
-		let dataKeep = JSON.parse(req.responseText);
-			console.log(dataKeep);
 		if (currentUrl.includes("profile.html")) {
-			
+			let dataKeep = JSON.parse(req.responseText);
+			console.log(dataKeep);
 			dataKeep.data.forEach(item => {
 				const {
 					id,
