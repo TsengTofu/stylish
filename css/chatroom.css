@@ -191,3 +191,9 @@ input[name="msg"] {
         height: 200px;
     }
 }
+
+@media (max-width:320px){
+    input[name="name"]{
+        width: 11%;
+    }
+}
