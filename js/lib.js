@@ -764,45 +764,7 @@ app.getUserProductKeep = function (id) {
 				console.log(data);
 				console.log(data.keep);
 				// 找出是不是有收藏過
-				if (data.keep === false) {
-					// 加入收藏的btn------------------------------------------------
-					// 收藏再點一次就取消
-					app.setEventHandlers(app.get("#collection_btn"), {
-						click: function () {
-							let keepStatus = data.keep;
-							keepStatus = true;
-							app.get(".btn_content").innerHTML = `<i class="fas fa-heart" id="already_collection"></i>` + "已加入收藏";
-							app.get("#already_collection").style.display = "initial";
-							alert("已加入收藏！");
-
-							let requestData = {
-								"user_id": app.userId,
-								"product_id": id,
-								"keep": keepStatus
-							}
-
-							app.ajax("post", app.cst.API_HOST + "/user/keep", requestData, {}, function (req) {
-								console.log(typeof req.responseText);
-								let data = JSON.parse(req.responseText);
-								console.log(data);
-								if (data.status === "Success") {
-									console.log("Success!");
-								}
-							});
-							// 這邊試試看
-							app.setEventHandlers(app.get("#collection_btn"), {
-								click: function () {
-									let keepStatus = false;
-									app.get(".btn_content").innerHTML = `<i class="far fa-frown"></i>` + "取消收藏";
-									alert("已取消收藏！");
-								}
-							})
-						}
-
-					});
-				}
-
-
+				// if(){}
 			}
 		);
 	}
