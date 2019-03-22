@@ -704,7 +704,7 @@ app.getUserKeep = function (id) {
 				// <a href="#" id="collect_btn">產品細節</a>
 				const collect_btn = document.createElement("a");
 				collect_btn.className = "collect_btn";
-				collect_btn.innerHTML = "產品細節" + `  <i class="fas fa-arrow-circle-right"></i>`;;
+				collect_btn.innerHTML = "產品細節"+ `  <i class="fas fa-arrow-circle-right"></i>`;;
 				// 可以連結到收藏的產品頁面
 				collect_btn.setAttribute("href", `./product.html?id=${id}`);
 
@@ -766,50 +766,7 @@ app.getUserProductKeep = function (id) {
 				console.log(data.keep);
 				// 找出是不是有收藏過
 				// if(){}
-				// 加入收藏的btn------------------------------------------------
-				// 收藏再點一次就取消
-				app.setEventHandlers(app.get("#collection_btn"), {
-					click: function () {
-						let keepStatus = false;
-						if (app.state.keep) {
-							app.state.keep = false;
-							keepStatus = false;
-						} else {
-							app.state.keep = true;
-							keepStatus = true;
-							app.get(".btn_content").innerHTML = `<i class="fas fa-heart" id="already_collection"></i>` + "已加入收藏";
-							app.get("#already_collection").style.display = "initial";
-							alert("已加入收藏！");
-							// 這邊試試看
-							app.setEventHandlers(app.get("#collection_btn"), {
-								click: function () {
-									let keepStatus = false;
-									app.get(".btn_content").innerHTML = `<i class="far fa-frown"></i>` + "取消收藏";
-									alert("已取消收藏！");
-								}
-							})
-							// 這邊試試看
-						}
-
-
-						let requestData = {
-							"user_id": app.userId,
-							"product_id": id,
-							"keep": keepStatus
-						}
-
-						app.ajax("post", app.cst.API_HOST + "/user/keep", requestData, {}, function (req) {
-							console.log(typeof req.responseText);
-							let data = JSON.parse(req.responseText);
-							console.log(data);
-							if (data.status === "Success") {
-								console.log("Success!");
-							}
-						});
-					}
-				});
-
-				// 加入收藏的btn------------------------------------------------
+				
 			}
 		);
 	}
@@ -851,3 +808,7 @@ app.deleteUserProductKeep = function () {
 		});
 	}
 };
+
+
+
+
