@@ -174,11 +174,12 @@ input[name="msg"] {
 @media (max-width:1000px) {
     .service_btn {
         position: fixed;
-        bottom: 10%;
+        bottom: 12%;
+        right:3%;
     }
     #container {
-        width: 75%;
-        height: 200px;
-        bottom: 5%;
+        width: 100%;
+        bottom: 12%;
+        right:3%;
     }
 }
