@@ -93,9 +93,10 @@ main>.view {
 }
 
 .right_content{
-	width: 40%;
+	width: 30%;
 	padding: 20px;
 	box-sizing: border-box;
+	margin:0 5%;
 }
 
 .collection_title{
