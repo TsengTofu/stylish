@@ -26,7 +26,7 @@ app.init = function () {
 			} else {
 				app.state.keep = true;
 				keepStatus = true;
-				app.get("#collection_btn").innerHTML=`<i class="fas fa-heart" id="already_collection"></i>`+ "已加入收藏";
+				app.get(".btn_content").innerHTML=`<i class="fas fa-heart" id="already_collection"></i>`+ "已加入收藏";
 			}
 
 			let requestData = {
