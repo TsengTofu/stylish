@@ -109,6 +109,7 @@ main>.view {
 	color: #fff;
 	padding: 10px;
 	border-radius: 10px;
+	text-align: center;
 }
 
 .collect_btn_delete {
