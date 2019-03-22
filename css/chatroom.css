@@ -181,5 +181,6 @@ input[name="msg"] {
         width: 76%;
         bottom: 12%;
         right:3%;
+        height:200px;
     }
 }
