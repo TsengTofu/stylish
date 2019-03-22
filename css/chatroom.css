@@ -178,9 +178,12 @@ input[name="msg"] {
         right:3%;
     }
     #container {
-        width: 76%;
+        width: 92%;
         bottom: 12%;
         right:3%;
-        height:200px;
+    }
+
+    #content{
+        height: 200px;
     }
 }
